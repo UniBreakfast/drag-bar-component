@@ -1,0 +1,14 @@
+drag-bar {
+  position: fixed;
+  width: 30vmin; /* should not change dynamically! */
+  height: 12vmin; /* should not change dynamically! */
+  background-color: plum;
+  user-select: none;
+  padding: 6px 40px;
+}
+
+drag-bar>:only-child {
+  background: wheat;
+  height: 100%;
+  overflow: hidden;
+}

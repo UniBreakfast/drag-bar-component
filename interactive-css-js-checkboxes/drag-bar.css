@@ -1,0 +1,41 @@
+/** drag-bar **/
+@media screen {
+  #body:has(#bar-fix:checked) drag-bar {
+    position: fixed;
+  }
+  
+  #body:has(#bar-width:checked) drag-bar {
+    width: 30vmin;
+  }
+
+  #body:has(#bar-height:checked) drag-bar {
+    height: 12vmin;
+  }
+
+  #body:has(#bar-noselect:checked) drag-bar {
+    user-select: none;
+  }
+
+  #body:has(#reset) drag-bar {
+      background-color: plum;
+  }
+
+  #body:has(#bar-pad:checked) drag-bar {
+    padding: 6px 40px;
+  }
+}
+
+/** drag-bar>:only-child **/
+@media screen {
+  #body:has(#child-bg:checked) drag-bar>:only-child {
+    background: wheat;
+  }
+  
+  #body:has(#child-height:checked) drag-bar>:only-child {
+    height: 100%;
+  }
+
+  #body:has(#child-overhide:checked) drag-bar>:only-child {
+    overflow: hidden;
+  }
+}

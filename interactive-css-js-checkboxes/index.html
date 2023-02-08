@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="drag-bar.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
+  <!-- <script src="app.js" type="module"></script> -->
+
+  <title>Draggable bar</title>
+</head>
+
+<body id="body">
+  <form>
+    <label>
+      <input type="checkbox" id="reset" checked>
+      reset browser default styles
+    </label>
+
+    <hr>
+
+    <fieldset>
+      <pre
+        ><code
+          ><b>drag-bar</b> {
+            <label
+              ><input type="checkbox" id="bar-fix" checked
+              ><b>position: fixed;</b
+            ></label
+            
+            ><label
+              ><input type="checkbox" id="bar-width" checked
+              ><b>width: 30vmin;</b
+            ></label
+  
+            ><label
+              ><input type="checkbox" id="bar-height" checked
+              ><b>height: 12vmin;</b
+            ></label
+  
+            ><label
+              ><input type="checkbox" id="bar-noselect" checked
+              ><b>user-select: none;</b
+            ></label
+  
+            ><label
+              ><input type="checkbox" id="bar-pad" checked
+              ><b>padding: 6px 40px;</b
+            ></label
+          ><br>}
+        </code>
+      </pre>
+
+      <pre
+        ><code
+          ><b>wrap-list</b> {
+            <label
+              ><input type="checkbox" id="child-bg" checked
+              ><b>background: wheat;</b
+            ></label
+            
+            ><label
+              ><input type="checkbox" id="child-height" checked
+              ><b>height: 100%;</b
+            ></label
+  
+            ><label
+              ><input type="checkbox" id="child-overhide" checked
+              ><b>overflow: hidden</b
+            ></label
+          ><br>}
+        </code>
+      </pre>
+
+      <pre
+        ><code
+          ><b>JS handlers</b>:
+            <label
+              ><input type="checkbox" id="jsClick" checked
+              ><b>require mousedown to drag / mouseup to drop</b
+            ></label
+            
+            ><label
+              ><input type="checkbox" id="jsTarget" checked
+              ><b>check if bar is the target</b
+            ></label
+            
+            ><label
+              ><input type="checkbox" id="jsOffset" checked
+              ><b>take offset into account</b
+            ></label
+  
+            ><label
+              ><input type="checkbox" id="jsCollide" checked
+              ><b>handle border collision</b
+            ></label
+  
+            ><label
+              ><input type="checkbox" id="jsResize" checked
+              ><b>push by border on viewport resize</b
+            ></label
+          >
+        </code>
+      </pre>
+    </fieldset>
+  </form>
+
+  <div>
+    <drag-bar id="bar">
+      <div>
+        Any content here. Probably some indicators, messages or buttons. 
+        Something you don't need to select though.
+      </div>
+    </drag-bar>
+  </div>
+</body>
+
+</html>
