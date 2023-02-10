@@ -9,12 +9,13 @@
   <link rel="stylesheet" href="drag-bar.css">
   <link rel="stylesheet" href="style.css">
 
-  <!-- <script src="script.js" defer></script> -->
+  <script src="script.js" defer></script>
   <!-- <script src="script00000.js" defer></script> -->
   <!-- <script src="script10000.js" defer></script> -->
   <!-- <script src="script11000.js" defer></script> -->
   <!-- <script src="script11100.js" defer></script> -->
   <!-- <script src="script11110.js" defer></script> -->
+  <!-- <script src="script11111.js" defer></script> -->
   <!-- <script src="app.js" type="module"></script> -->
 
   <title>Draggable bar</title>
@@ -83,7 +84,7 @@
       </pre>
 
       <pre
-        ><code
+        ><code id="boxContainer"
           ><b>JS handlers</b>:
             <label
               ><input type="checkbox" id="jsClick" checked
@@ -114,6 +115,25 @@
       </pre>
     </fieldset>
   </form>
+
+  <pre
+    ><code id="codeBlock">
+      const normalize = (value, max) => Math.max(0, Math.min(max, value))
+  
+      bar.onmousedown = e0 => {
+        if (e0.target == bar) onmousemove = e => {
+          bar.style.left = normalize(e.clientX - e0.offsetX, innerWidth - bar.offsetWidth) + 'px'
+          bar.style.top = normalize(e.clientY - e0.offsetY, innerHeight - bar.offsetHeight) + 'px'
+        }
+      }
+      onmouseup = () => onmousemove = null
+      
+      onresize = () => {
+        bar.style.left = normalize(bar.offsetLeft, innerWidth - bar.offsetWidth) + 'px'
+        bar.style.top = normalize(bar.offsetTop, innerHeight - bar.offsetHeight) + 'px'
+      }
+    </code>
+  </pre>
 
   <div>
     <drag-bar id="bar">
