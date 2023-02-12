@@ -45,7 +45,7 @@ function switchScript(state) {
 
   scripts[state]()
 
-  codeBlock.innerText = scripts[state].toString().slice(26, -2)
+  codeBlock.innerText = '  ' + scripts[state].toString().slice(26, -2).trim()
 }
 
 function script00000() {
@@ -105,7 +105,7 @@ function script11111() {
     }
   }
   onmouseup = () => onmousemove = null
-  
+
   const normalize = (value, max) => Math.max(0, Math.min(max, value))
 
   onresize = () => {
