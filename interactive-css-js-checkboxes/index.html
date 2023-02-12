@@ -58,13 +58,27 @@
               ><input type="checkbox" id="bar-pad" checked
               ><b>padding: 6px 40px;</b
             ></label
+          ><br>}<br><br
+
+          ><b>drag-bar:hover:not(:has(:hover))</b> {
+            <label
+              ><input type="checkbox" id="bar-hover" checked
+              ><b>cursor: grab;</b
+            ></label
           ><br>}
         </code>
       </pre>
 
       <pre
         ><code
-          ><b>wrap-list</b> {
+          ><b>drag-bar:active:not(:has(:active))</b> {
+            <label
+              ><input type="checkbox" id="bar-active" checked
+              ><b>cursor: grabbing;</b
+            ></label
+          ><br>}<br><br
+
+          ><b>drag-bar>:only-child</b> {
             <label
               ><input type="checkbox" id="child-bg" checked
               ><b>background: wheat;</b

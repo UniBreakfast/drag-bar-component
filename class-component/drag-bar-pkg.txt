@@ -1,0 +1,3 @@
+If you use 'drag-bar-pkg.js' then there's no need for other js of css files for it to work. It's all in one file.
+
+Otherwise, you'll need to include 'drag-bar.js' and 'drag-bar.css' both.

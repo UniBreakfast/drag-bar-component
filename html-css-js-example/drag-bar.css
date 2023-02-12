@@ -7,6 +7,14 @@ drag-bar {
   padding: 6px 40px;
 }
 
+drag-bar:hover:not(:has(:hover)) {
+  cursor: grab;
+}
+
+drag-bar:active:not(:has(:active)) {
+  cursor: grabbing;
+}
+
 drag-bar>:only-child {
   background: wheat;
   height: 100%;

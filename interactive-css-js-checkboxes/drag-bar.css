@@ -25,6 +25,20 @@
   }
 }
 
+/** drag-bar:hover:not(:has(:hover)) **/
+@media screen {
+  #body:has(#bar-hover:checked) drag-bar:hover:not(:has(:hover)) {
+    cursor: grab;
+  }
+}
+
+/** drag-bar:active:not(:has(:active)) **/
+@media screen {
+  #body:has(#bar-active:checked) drag-bar:active:not(:has(:active)) {
+    cursor: grabbing;
+  }
+}
+
 /** drag-bar>:only-child **/
 @media screen {
   #body:has(#child-bg:checked) drag-bar>:only-child {
